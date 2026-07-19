@@ -262,3 +262,39 @@ Architecture & Security (System Architect / Enterprise Architect)
 - Architect Agent начинает C4 Modeling (WBS-002.5, WBS-002.6)
 - Programmer Agent готовится к implementation (WBS-002.1, WBS-002.2)
 - QA Agent готовит contract analysis tests
+
+---
+
+## 📦 Analyst Agent — Deliverables (готово к HITL Gate #1)
+
+> **Дата:** 2026-07-19 | **Статус:** ⬜ Awaiting Human Approval
+
+### Созданные артефакты
+
+| Артефакт | WBS | Файл |
+|----------|-----|------|
+| UC-001 RTE Role Identity | WBS-002.1 | [UC-001](../docs/domain/usecases/UC-001-RTE-Role-Identity.md) |
+| UC-002 RTE PI Planning Workflow | WBS-002.2 | [UC-002](../docs/domain/usecases/UC-002-RTE-PI-Planning-Workflow.md) |
+| UC-003 LPM Role Identity | WBS-001.3 | [UC-003](../docs/domain/usecases/UC-003-LPM-Role-Identity.md) |
+| UC-004 LPM Strategic Themes | WBS-001.4 | [UC-004](../docs/domain/usecases/UC-004-LPM-Strategic-Themes.md) |
+| Domain Glossary (26 терминов) | — | [glossary.md](../docs/domain/glossary.md) |
+
+### Ключевые решения (для Architect handoff)
+
+1. **HITL везде явно закреплён** — оба агента (RTE, LPM) готовят рекомендации и записывают решения, но НЕ принимают решения о scope/бюджете/commitment автономно. Это отражено в Authority Scope таблицах UC-001 и UC-003.
+2. **No fabricated data** — при отсутствии данных в Git агенты флагируют gap и запрашивают, а не выдумывают (AC во всех UC).
+3. **Mermaid.js как канонический вывод** — Program Board (UC-002) и horizon/theme distribution (UC-004) генерируются как Mermaid.js.
+4. **Backlog Bus как handoff-контракт** — RTE Agent публикует committed PI-артефакты для downstream агентов (зависит от WBS-004.3).
+
+### Открытые вопросы (требуют ответа на HITL Gate #1)
+
+- **Denis (RTE):** правила автономного vs эскалируемого разрешения зависимостей; канонический layout Program Board; прямое уведомление команд или только через human RTE.
+- **Kirill (PO):** точное Definition of Ready, против которого RTE Agent проверяет Features.
+- **Anatoli (LPM):** канонический набор Strategic Themes и Investment Horizons для SALSA-портфеля; budget Guardrails и пороги; обязательные поля epic MD-файла; триггер-каденс мониторинга.
+- **Dima (Architect):** схема epic MD-файла; источник данных (MD-файлы vs MCP-интеграция); реализация публикации в Backlog Bus.
+
+### Handoff для Architect Agent (неделя 2)
+
+- **Вход для C4:** 4 UC + glossary дают bounded contexts (ART/Program Coordination, Lean Portfolio Orchestration) и их взаимодействия.
+- **Приоритет:** сначала смоделировать RTE Agent (P0, критический путь), затем LPM Agent (P1).
+- **Точки интеграции для проработки:** RTE↔Product Management (Features), RTE↔Epic Owner (Epics), LPM↔Epic Owner (LBC), все агенты↔Backlog Bus.
