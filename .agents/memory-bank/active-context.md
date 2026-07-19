@@ -16,9 +16,11 @@
 ✅ **Tool Configuration:** `.clinerules` and `mcp-settings.json` provisioned
 
 ## Next Actions
-1. **HITL Review of Assignment-002 v2.0** — Human approval needed on 10-member re-run, 6-task reassignments, and unresolved Ilya/Andrey overload risk
-2. **Analyst Agent Phase** — Use Case Analysis for Portfolio / Program / Team levels against WBS-002 + Assignment-002 v2.0
-3. **Execute HITL Gate** — Human review of Analyst output before Architect phase
+1. ✅ **HITL Review of Assignment-002 v2.0** — COMPLETED (19/07/2026, merged to main)
+2. **Phase 1 Week 1: Analyst Phase** — Use Case Analysis (UC-001 through UC-004) for RTE, LPM, Program Coordination levels
+   - See: `.backlog/003-phase-1-week-1-plan.md` (detailed roles, tasks, timeline)
+   - HITL Gate #1: UC Review & Approval (end of week)
+3. **Phase 1 Week 2: Architect Phase** — C4 Modeling, Threat Models, Solution Intent specs (after UC approval)
 
 ## Tooling Environment
 - **IDE:** VS Code + OpenCode
