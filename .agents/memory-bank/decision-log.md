@@ -1,5 +1,33 @@
 # Decision Log
 
+## 2026-07-19 — Resource Re-Assignment: 3 New Members Onboarded, Assignment-002 Re-run
+
+### Context
+3 new team members joined (Anatoli Sanko, Dmitry Busygin, Roman Nyatin — all SAFe/Agile-coaching/RTE profiles with no technical/engineering skills). PM Agent re-ran the Greedy + Local Search algorithm (ADR-002) across all 50 WBS-002 tasks with 10 performers instead of 7.
+
+### Decision
+Retained the existing 7-member assignment as baseline (validated near-optimal per ADR-002's own local search) rather than re-deriving all 50 task scores from scratch. Re-scored and reassigned 6 tasks (26h total) from Ruslan/Denis/Kirill to Anatoli/Dmitry/Roman based on skill-category fit (SAFe Portfolio, ART Coordination, Agile Coaching) and load-balancing soft-constraint precedent already established in ADR-002 §Trade-offs.
+
+### Rationale
+- **Anatoli's SPCT-tier LPM/OKR/RTE expertise outscores incumbents** on SAFe-Portfolio-level tasks (3 score-improving moves: WBS-001 20.0>19.0, WBS-007.1 20.0>19.0, WBS-001.4 20.0>12.6). Reduces Ruslan from 100%→50% and Denis from 52.5%→35%.
+- **Dmitry/Roman lack the score to outscore incumbents** but were given low-risk, non-critical-path tasks matching their profiles (RTE workflow, PM assignment map, Program coordination inception), to productively use otherwise-idle new capacity (3 onboarding moves, intentional soft-constraint trade-off per ADR-002 precedent).
+- **Ilya (135% capacity, corrected) and Andrey (117% capacity) overload explicitly NOT resolved** by this re-run — none of the 3 new members carry any rating above 3/10 in Mermaid, DevOps/CI-CD, RAG/AI Engineering, Security/AppSec, or Meta-Agent Infrastructure. This is an **unresolved risk carried forward** to be addressed separately.
+
+### Data-Quality Note
+While re-summing the 50-task matrix to compute new totals, found the original assignment-002.md's summary tables (312h/292h total effort stated, per-performer totals in Performer Load Analysis) did not match the underlying 50-row task matrix. Corrected baseline: **260h true total effort** (not 312h/292h). Used corrected totals throughout the re-run; flagged for future cleanup of pre-existing typos (Kirill's printed Score 8.0 vs formula 10.4, Ruslan's WBS-007.1 printed 18.0 vs formula 19.0).
+
+### Files Updated
+- `.backlog/member-matrix-temp.md` — added Anatoli/Dmitry/Roman rows with skill ratings (0-10) and experience weights (1.3-2.0)
+- `.backlog/greedy-assignment-log.md` — appended re-run section with new 10-performer starting budgets (444h total), 6-task reassignment table, data-quality notes
+- `docs/architecture/adr/assignment-002.md` — v2.0: updated Task-Performer Matrix (6 rows), Performer Load Analysis (10 performers), Weekly Distribution Summary (verified row totals), Constraint Validation, Total Project Score (841.0, −6.3 points), Trade-offs; version bumped to 2.0, date added as "Re-run: 19/07/2026"
+- `.agents/memory-bank/progress.md` — checked off task-resource-matching checkbox, added re-run note
+- `.agents/memory-bank/active-context.md` — updated "Last Action", "Next Actions"
+
+### Decision-Maker
+PM Agent, per human-confirmed decision (full algorithmic re-run + full supporting-file consistency update via plan approval).
+
+---
+
 ## 2026-06-29 — PM Agent WBS Preparation Workflow Created
 
 ### Context

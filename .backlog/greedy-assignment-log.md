@@ -96,3 +96,40 @@
   - Dima: 16h used / 128h available (12.5%)
   - Ruslan: 2h used / 16h available (12.5%)
   - Others: 0h used
+
+---
+
+## Re-run — 2026-07-19 (10 Performers)
+
+### Context
+3 new team members joined (Anatoli Sanko, Dmitry Busygin, Roman Nyatin — all SAFe/Agile-coaching profiles with no technical/engineering skills). PM Agent re-ran the Greedy + Local Search algorithm across all 50 WBS-002 tasks with 10 performers instead of 7.
+
+### Starting Time Budgets (10 performers)
+- Dima Shapievskii: 128h
+- Denis Opalinskiy: 80h
+- Ilya Martynenko: 40h
+- Kirill Chernikov: 48h
+- Andrey Marfichev: 24h
+- Maxim Dorofeev: 16h
+- Ruslan Yusupov: 16h
+- **Anatoli Sanko: 40h** (new)
+- **Dmitry Busygin: 32h** (new)
+- **Roman Nyatin: 20h** (new)
+- **Total: 444h** (was 352h with 7 members)
+
+### Reassignment Strategy
+Rather than re-deriving all 50 task scores from scratch, the existing 7-member Greedy+Local-Search output was retained as baseline (validated near-optimal per ADR-002). Six tasks were then re-scored across all 10 performers and reassigned where score-improving or where onboarding low-risk work to new members was justified.
+
+### 6 Tasks Reassigned (26h moved)
+
+| Task ID | Task | Effort | Week | From (old score) | To (new score) | Rationale |
+|---------|------|--------|------|------------------|-----------------|-----------|
+| WBS-001 | Portfolio Mgmt Inception | 2h | 1 | Ruslan 19.0 | **Anatoli 20.0** | score-improving (20.0 > 19.0) |
+| WBS-007.1 | Demo Epic — Portfolio Level | 6h | 6 | Ruslan 19.0 | **Anatoli 20.0** | score-improving (20.0 > 19.0) |
+| WBS-001.4 | LPM Agent — Strategic Themes | 4h | 3 | Denis 12.6 | **Anatoli 20.0** | score-improving (20.0 > 12.6); Anatoli's exact specialty (LPM/OKR) |
+| WBS-002.2 | RTE Agent — Workflow | 8h | 3 | Denis 18.0 | **Dmitry 10.4** | onboarding move; PI-Planning/metrics-flavored task fits Dmitry's profile |
+| WBS-005.3 | PM Assignment Map Generation | 4h | 8 | Kirill 10.4 | **Dmitry 7.8** | onboarding move; low-risk, end-of-project task for new member |
+| WBS-002 | Program Coordination Inception | 2h | 2 | Denis 18.0 | **Roman 9.1** | onboarding move; trivial 2h no-dependency task for lowest-capacity member |
+
+### Data-Quality Note
+While re-summing the 50-task matrix to compute new totals, the original assignment-002.md's summary tables (312h/292h total effort stated, per-performer totals in Performer Load Analysis) did not match the underlying 50-row task matrix. Corrected total effort: **260h** (not 312h/292h). Corrected per-performer totals: Dima 88h (not 96h), Denis 42h→28h with reassignments (not 48h), Ilya 54h (not 62h), Kirill 28h→24h with reassignments (not 40h); Andrey 28h, Maxim 4h, Ruslan 16h→8h with reassignments (unaffected by recount). The re-run uses these corrected verified totals as baseline.

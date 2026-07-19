@@ -25,15 +25,16 @@
 - [x] PM Agent Workflows created:
   - [x] `pm-wbs-preparation.md` (WBS creation for 8-week Agentic SAFe scope)
   - [x] `pm-task-resource-matching.md` (task-resource matching using Greedy + Local Search algorithm)
+  - [x] PM Agent executes WBS preparation → `.backlog/wbs-002-salsa.md` (29/06/2026)
+  - [x] PM Agent executes task-resource matching → `docs/architecture/adr/assignment-002.md` v1.0 (29/06/2026)
+  - [x] PM Agent re-runs task-resource matching with 10 members → `assignment-002.md` v2.0 (19/07/2026)
 
 ## Current Phase: COMPLETED
-**Phase 0 (Infrastructure Setup)** — Fast-ASDLC onboarding is complete.
+**Phase 0 (Infrastructure Setup)** — Fast-ASDLC onboarding complete; WBS-002 finalized; Assignment-002 v2.0 complete (10 members integrated).
 
 ## Next Phase: Phase 1 (Analysis & Design)
-- [ ] PM Agent executes WBS preparation (`.agents/workflows/pm-wbs-preparation.md`)
-- [ ] Human HITL review of WBS
-- [ ] PM Agent executes task-resource matching (`.agents/workflows/pm-task-resource-matching.md`)
-- [ ] Analyst Agent executes use case analysis
+- [ ] Human HITL review of Assignment-002 v2.0
+- [ ] Analyst Agent executes use case analysis (Portfolio, Program, Team levels)
 - [ ] Human HITL review
 - [ ] Architect Agent executes C4 modeling
 
