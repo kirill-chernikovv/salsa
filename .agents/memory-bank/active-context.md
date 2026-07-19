@@ -1,9 +1,9 @@
 # Memory Bank - Active Context
 
 ## Current System State
-- **Phase:** Phase 0 COMPLETED — Fast-ASDLC onboarding finished. Ready for Phase 1 (Analysis & Design).
-- **Status:** System infrastructure provisioned. Agent workforce configured. PM Agent workflows created.
-- **Last Action:** Created PM workflow for WBS preparation (`.agents/workflows/pm-wbs-preparation.md`).
+- **Phase:** Phase 0 COMPLETED — Fast-ASDLC onboarding finished. WBS-002 finalized. Assignment-002 v2.0 complete (10 members). Ready for Phase 1 (Analysis & Design).
+- **Status:** System infrastructure provisioned. Agent workforce configured. PM workflows executed. 3 new members integrated into resource allocation.
+- **Last Action:** Re-ran PM task-resource-matching algorithm for 10 performers; updated all supporting files (19/07/2026).
 
 ## System Readiness
 ✅ **Project Brief:** `/agents/memory-bank/project-brief.md` — Product vision, language policy, domain boundaries defined
@@ -16,8 +16,8 @@
 ✅ **Tool Configuration:** `.clinerules` and `mcp-settings.json` provisioned
 
 ## Next Actions
-1. **Create first product backlog item** (e.g., "Define Portfolio Management domain use cases")
-2. **Assign to Analyst Agent** — Start Phase 1: Analysis & Design
+1. **HITL Review of Assignment-002 v2.0** — Human approval needed on 10-member re-run, 6-task reassignments, and unresolved Ilya/Andrey overload risk
+2. **Analyst Agent Phase** — Use Case Analysis for Portfolio / Program / Team levels against WBS-002 + Assignment-002 v2.0
 3. **Execute HITL Gate** — Human review of Analyst output before Architect phase
 
 ## Tooling Environment
